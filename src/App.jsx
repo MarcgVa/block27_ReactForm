@@ -4,12 +4,12 @@ import { useState } from 'react'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [token, setToken] = useState(null);
 
   return (
     <>
-      <SignUp />
-      <Authenticate/>
+      <SignUp setToken={setToken} />
+      <Authenticate token={token}/>
     </>
   )
 }
