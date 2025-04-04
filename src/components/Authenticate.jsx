@@ -41,7 +41,7 @@ const Authenticate = ({ token }) => {
         <h2 className="font-bold text-center p-2 mt-5 mx-20 rounded-md bg-linear-to-r from-pink-500 to-blue-500 px-2 text-white">
           Authenticate
         </h2>
-        <h2 className='mt-5 mx-20 p-4 bg-green-400'>
+        <h2 className= "mt-5 mx-20 p-4 ${authMessage !== null ? bg - green - 400 : null}">
           <p className="text-red-800 text-center">
             {authMessage !== null ? authMessage : null}
           </p>
