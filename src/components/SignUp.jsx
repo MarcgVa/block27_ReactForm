@@ -1,16 +1,13 @@
 import React, { useState } from 'react'
-
 const SignUp = ({setToken}) => {
 
-  const API_URL = "https://fsa-jwt-practice.herokuapp.com/"
+  const API_URL = "https://fsa-jwt-practice.herokuapp.com/";
   const [errorMsg, setErrorMsg] = useState(null);
   const [formData, setFormData] = useState({
     email: '',
     password: '',
   });
   
-
-
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -97,8 +94,9 @@ const SignUp = ({setToken}) => {
          </div>
          <div className="flex justify-center">
            <button
-             className="border rounded-full px-4 mt-10 border-blue-500 text-blue-600 hover:border-transparent hover:bg-blue-600 hover:text-white active:bg-blue-700 focus-visible:outline-blue-700"
-             type='submit'
+             disabled={formData.password.length < 8 ? true : false }
+             className="border-2 rounded-full px-4 mt-10 text-blue-600 hover:border-transparent hover:bg-blue-600 hover:text-white active:bg-blue-700 disabled:border-gray-600 disabled:text-gray-500"
+             type="submit"
            >
              Sign Up
            </button>
