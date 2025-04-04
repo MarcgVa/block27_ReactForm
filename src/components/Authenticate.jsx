@@ -54,7 +54,8 @@ const Authenticate = ({ token }) => {
         </h2>
         <div className="flex justify-center">
           <button
-            className="border rounded-full px-4 mt-10 border-blue-500 text-blue-600 hover:border-transparent hover:bg-blue-600 hover:text-white active:bg-blue-700"
+            disabled={!token}
+            className="border rounded-full px-4 mt-10 border-blue-500 text-blue-600 hover:border-transparent hover:bg-blue-600 hover:text-white active:bg-blue-700 disabled:border-gray-600 disabled:text-gray-600"
             onClick={handleClick}
           >
             Authenticate
