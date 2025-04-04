@@ -47,7 +47,7 @@ const Authenticate = ({ token }) => {
           </p>
           <article className="text-wrap: wrap-anywhere pt-5">
             <p className="text-blue-700 mx-20 ">Token:</p>
-            <p className="text-blue-700/75 mx-20 text-sm border p-2 ">
+            <p className="text-blue-700/75 mx-20 text-sm border p-2">
               {token !== null ? token : null}
             </p>
           </article>
