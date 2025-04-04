@@ -41,10 +41,16 @@ const Authenticate = ({ token }) => {
         <h2 className="font-bold text-center p-2 mt-5 mx-20 rounded-md bg-linear-to-r from-pink-500 to-blue-500 px-2 text-white">
           Authenticate
         </h2>
-        <h2 className= "mt-5 mx-20 p-4 ${authMessage !== null ? bg - green - 400 : null}">
-          <p className="text-red-800 text-center">
+        <h2 className="mt-5 mx-20 p-4 ${authMessage !== null ? bg - green - 400 : null}">
+          <p className="text-red-800 text-center font-bold text-5xl text-shadow-amber-400 text-shadow-lg">
             {authMessage !== null ? authMessage : null}
           </p>
+          <article className="text-wrap: wrap-anywhere pt-5">
+            <p className="text-blue-700 mx-20 ">Token:</p>
+            <p className="text-blue-700/75 mx-20 text-sm border p-2 ">
+              {token !== null ? token : null}
+            </p>
+          </article>
         </h2>
         <div className="flex justify-center">
           <button

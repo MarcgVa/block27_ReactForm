@@ -22,8 +22,9 @@ const SignUp = ({setToken}) => {
         body: JSON.stringify(formData),
       });
       const json = await response.json();
-      if (json.success) { 
+      if (json.success) {
         setToken(json.token);
+        console.log(json.token);
       };
       if (json.error) {
         throw new Error(json.error.message);
@@ -32,7 +33,6 @@ const SignUp = ({setToken}) => {
       setErrorMsg(err.message);
       console.error(err.message);
     }
-
   }
 
   const handleUpdate = (e) => {
