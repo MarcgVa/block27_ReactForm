@@ -97,15 +97,17 @@ const SignUp = ({setToken}) => {
          </div>
          <div className="flex justify-center">
            <button
-             type="submit"
-             className="border rounded-full px-4 mt-10 border-blue-500 text-blue-600 hover:border-transparent hover:bg-blue-600 hover:text-white active:bg-blue-700"
+             className="border rounded-full px-4 mt-10 border-blue-500 text-blue-600 hover:border-transparent hover:bg-blue-600 hover:text-white active:bg-blue-700 focus-visible:outline-blue-700"
+             type='submit'
            >
              Sign Up
            </button>
          </div>
        </form>
-       <h2 >
-         <p className="text-red-800 text-center">{errorMsg !== null ? errorMsg : null}</p>
+       <h2>
+         <p className="text-red-800 text-center">
+           {errorMsg !== null ? errorMsg : null}
+         </p>
        </h2>
      </div>
    </div>
